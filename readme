@@ -6,7 +6,7 @@ Purpose:
 This program contains two different methods to get strong approximate solutions to the NP hard clustering problem in n^2 time
 
 GA: Genetic Algorithms
-This solution uses a simple GA with adjustable parameters (in hw8.h) to find a solution through directed search
+This solution uses a simple GA with adjustable parameters (in ga_k-means_clustering.h) to find a solution through directed search
 
 K-means clustering:
 This solution uses a slightly modified version of the standard k-means clustering algorithm to adjust randomly initialized
@@ -17,10 +17,10 @@ Notes on compiling:
 This was written as a Qt Creator project. And originally compiled using gcc through minigw.
 
 Files:
-HW8.pro The QT project file 
+ga_k-means_clustering.pro The QT project file 
 main.cpp the source file for the executable. Starts the GUI and does a test of the random number generator (MersenneTwister.h)
 mainwindow.ui/mainwindow.h/mainwindow.cpp The GUI
-hw8.h/hw8.cpp This control structure simplifies/combines the GA and K-means for the gui
+ga_k-means_clustering.h/ga_k-means_clustering.cpp This control structure simplifies/combines the GA and K-means for the gui
 cluster.h/cluster.cpp provides common code between the different cluster types
 gacluster.h/gacluster.cpp inherites from cluster.h provides extra code to interface with GA.h
 kmeans.h/kmeans.cpp provides extra code required for the k-means algorithm

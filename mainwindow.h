@@ -3,7 +3,7 @@
 
 #include <QMainWindow>
 #include <QGraphicsScene>
-#include <hw8.h>
+#include <ga_k-means_clustering.h>
 #include <mypoint.h>
 
 namespace Ui {
@@ -44,7 +44,7 @@ private:
 
     bool ga_100x_is_true;
     bool kmeans_100x_is_true;
-    HW8 expiriment;
+    ga_k_means_clustering expiriment;
 
     MyPoint** test_points;
     MyPoint** cluster_points;
