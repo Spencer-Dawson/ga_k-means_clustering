@@ -1,0 +1,28 @@
+GA & K-means clustering test
+
+Author: Spencer Dawson (except for MersenneTwister.h which is written by Richard J. Wagner)
+
+Purpose:
+This program contains two different methods to get strong approximate solutions to the NP hard clustering problem in n^2 time
+
+GA: Genetic Algorithms
+This solution uses a simple GA with adjustable parameters (in hw8.h) to find a solution through directed search
+
+K-means clustering:
+This solution uses a slightly modified version of the standard k-means clustering algorithm to adjust randomly initialized
+centers by iteratively assigning each point in the data set to the nearest center(generated cluster) then adding the point
+closest to each center to it's data set. Finally each center is moved toward the center of the points in it's data set.
+
+Notes on compiling:
+This was written as a Qt Creator project. And originally compiled using gcc through minigw.
+
+Files:
+HW8.pro The QT project file 
+main.cpp the source file for the executable. Starts the GUI and does a test of the random number generator (MersenneTwister.h)
+mainwindow.ui/mainwindow.h/mainwindow.cpp The GUI
+hw8.h/hw8.cpp This control structure simplifies/combines the GA and K-means for the gui
+cluster.h/cluster.cpp provides common code between the different cluster types
+gacluster.h/gacluster.cpp inherites from cluster.h provides extra code to interface with GA.h
+kmeans.h/kmeans.cpp provides extra code required for the k-means algorithm
+ga.h a GA template adapted (slightly) for this implementation
+mypoint.h/mypoint.cpp used by the gui to help with plotting
